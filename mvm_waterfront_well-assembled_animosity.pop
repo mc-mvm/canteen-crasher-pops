@@ -1,0 +1,131 @@
+#base robot_mine.pop
+#base robot_
+Well-Assembled_Animosity
+{
+StartingCurrency 1000
+	RespawnWaveTime 5
+	CanBotsAttackWhileInSpawnRoom No
+	FixedRespawnWaveTime Yes
+	AddSentryBusterWhenDamageDealtExceeds 1500
+	AddSentryBusterWhenKillCountExceeds 20
+	Advanced 1
+	Templates
+    {
+        T_TFBot_Soldier_Bison // Name of the template, you can name it to whatever you want
+		{
+            Class Soldier
+            Name "Bisoner"
+            Skill Hard
+			Attributes HoldFireUntilFullReload
+			WeaponRestrictions SecondaryOnly
+            Item "Righteous Bison"
+            Item "Sergeant's Drill Hat"
+		}
+		T_TFBot_Soldier_JCrits
+		{
+			Class Soldier
+			Name "Junior Crits"
+			Skill Normal
+			Health 800
+			Scale 1.5
+			Attributes AlwaysCrit
+			Attributes HoldFireUntilFullReload
+			WeaponRestrictions PrimaryOnly
+			Item "Silver Botkiller Rocket Launcher Mk.I"
+			Item "Tyrantium Helmet"
+			CharacterAttributes
+			{
+			"move speed penalty" 0.85
+			}
+			ItemAttributes
+			{
+				ItemName "Silver Botkiller Rocket Launcher Mk.I"
+				"fire rate bonus" 0.75
+				"clip size bonus" 1.5
+				"rocket specialist" 4
+				"faster reload rate" 0.75
+			}
+		}
+		T_TFBot_Demo_IB
+		{
+			Class Demoman
+			Name "Bomber"
+			Skill Normal
+			WeaponRestrictions PrimaryOnly
+			Item "Iron Bomber"
+			Item "Glengarry Bonnet"
+		}
+		T_TFBot_Boss_The_OP_Gunbai
+		{
+			Class Scout
+			Name "The Deadly Mark"
+			Skill Hard
+			Health 18000
+			Attributes UseBossHealthBar
+			Attributes MiniBoss
+			WeaponRestrictions MeleeOnly
+			Item "The Fan O'War"
+			Item "Fast Learner"
+			ItemAttributes
+			{
+				ItemName "The Fan O'War"
+				"melee attack rate bonus" 0.60
+				"melee range multiplier" 2
+				"damage bonus" 3
+				"bleeding duration" 10
+				"slow enemy on hit" 100
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
+			}
+		}
+		T_TFBot_Pocket_Scout
+		{
+			Class Scout
+			Name "Pocket Pistol Scout"
+			Skill Normal
+			WeaponRestrictions SecondaryOnly
+			Item "Pretty Boy's Pocket Pistol"
+			Item "The Fed-Fightin' Fedora"
+		}
+    }
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+		WaveSpawn
+		{
+			Name demobomber_lo
+			TotalCount 40
+			TotalCurrency 200
+			SpawnCount 10
+			MaxActive 10
+			WaitBetweenSpawns 3
+			WaitBeforeStarting 2
+			Where spawnbot
+			Where spawnbot_flank
+			Where spawnbot_flank2
+			Where spawnbot_flank_rand
+			Squad
+			{
+				FormationSize 50
+				ShouldPreserveSquad 1
+				TFBot
+				{
+				Template T_TFBot_Demo_IB
+				}
+				TFBot
+				{
+				Template T_TFBot_Pocket_Scout
+				}
+			}
+		}
+	}
+}

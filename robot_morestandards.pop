@@ -1,0 +1,456 @@
+WaveSchedule
+{
+    Templates
+	{
+	    T_TFBot_Scout
+		{
+		    Class Scout
+			Name Scout
+		}	
+		T_TFBot_Soldier
+		{
+		    Class Soldier
+			Name Soldier
+		}
+		T_TFBot_Heavy
+		{
+		    Class Soldier
+			Name Soldier
+		}
+		T_TFBot_Heavy
+		{
+		    Class Heavy
+			Name Heavyweapons
+		}
+		T_TFBot_Heavy_Deflect
+		{
+		    Class Heavy
+			Name "Deflector​ Heavy"
+			Item "Deflector​"
+			ClassIcon heavy_deflector
+		}
+        T_TFBot_Engineer
+		{
+		    Name Engineer
+			Class Engineer
+		}
+		T_TFBot_Bowman_Razorback
+		{
+		    Class Sniper
+	        Name Bowman
+			ClassIcon sniper_bow
+			Item "The Huntsman"
+			Item "The Razorback"
+		}
+		T_TFBot_SydneySleeper_Razorback
+		{
+		    Class Sniper
+			Name "Razorback Sniper"
+			ClassIcon​ sniper_sydneysleeper_razorback
+			Item "The Sydney Sleeper"
+			Item "The Razorback"
+		}
+     ​  ​ T_TFBot_Heavy_Heater
+	    {
+		    Class Heavy
+			Name "Huo-Long​ Heater​ Heavy"
+			ClassIcon heavy_heater
+			Item "The huo-long​ heater"
+		}
+		T_TFBot_Heavy_Heater_TradisionalMandarin
+		{
+		    Class Heavy
+			Name "火龍 Heater​ Heavy"
+			ClassIcon heavy_heater
+			Item "The huo-long​ heater"
+		}	
+        T_TFBot_Heavy_Heater_ModernMandarin
+		{
+		    Class Heavy
+			Name "火龙 Heater​ Heavy"
+			ClassIcon heavy_heater
+			Item "The huo-long​ heater"
+		}	
+        T_TFBot_Scout_Scattergun_Bonk
+		{
+		    Class Scout
+			Name "Bonk Scout"
+			ClassIcon scout_bonk
+			Item "Bonk! Atomic​ Punch"
+		}
+		T_TFBot_Soldier_Concheror
+		{
+		    Class Soldier
+			Name "Concheror Soldier"
+			Item "The Concheror"
+			Attributes SpawnWithFullCharge
+			ClassIcon soldier_conch
+		}
+		T_TFBot_Soldier_Battalion
+		{
+		    Class Soldier
+			Name "Backup Soldier"
+			Item "The Battalion's Backup"
+			Attributes SpawnWithFullCharge
+			ClassIcon soldier_backup
+		}
+		T_TFBot_Scout_Fast
+        {
+            Class Scout
+            Name "Tiny Super Scout"
+            Health 125
+            ClassIcon scout_giant_fast
+            Skill Easy
+            Item "The Holy Mackerel"
+            Item " Bonk Boy"
+            CharacterAttributes
+            {
+                "move speed bonus" 2
+            }
+        }
+		T_TFBot_Medic_Syringegun
+		{
+		    Class Medic
+			Name "Syringegun Medic"
+			ClassIcon medic_syringe
+			WeaponRestrictions PrimaryOnly
+		}	
+		T_TFBot_Medic_Syringegun_Push
+		{
+		    Class Medic
+			Name "Syringegun Medic"
+			ClassIcon medic_syringe
+			Item "tf_weapon_syringegun"
+			WeaponRestrictions PrimaryOnly
+			BehaviorModifiers​ Push
+		}	
+		T_TFBot_Medic_Crossbow
+		{
+		    Class Medic
+			Name "Crossbow​ Medic"
+			ClassIcon medic_crossbow
+			Item "Crusader's Crossbow​"
+			WeaponRestrictions PrimaryOnly
+		}	
+		T_TFBot_Scout_Critcola
+		{
+		    Name "Crit-a-cola Scout"
+			Class Scout
+			ClassIcon scout_cola
+			Health 125
+			Skill Normal
+			Item "crit-a-cola"
+			Item "tf_weapon_bat"
+			Item "the caffeine cooler"
+			WeaponRestrictions MeleeOnly    
+		}
+		T_TFBot_Scout_Scattergun_Critcola
+		{
+		    Name "Crit-a-cola Scout"
+			Class Scout
+			ClassIcon scout_cola
+			Health 125
+			Skill Normal
+			Item "tf_weapon_scattergun"
+			Item "crit-a-cola"
+			Item "tf_weapon_bat"
+			Item "the caffeine cooler"
+			WeaponRestrictions 	PrimaryOnly    
+		}
+		T_TFBot_Soldier_Escape
+		{
+		    Name "Escape Plan Soldier"
+			Class Soldier
+			ClassIcon soldier_escape
+			Health 200
+			Skill Normal
+			Item "The Escape Plan"
+			WeaponRestrictions MeleeOnly
+		}		
+		T_TFBot_Scout_Sodapopper
+		{
+		    Name "Soda Popper Scout"
+			Class Scout
+			ClassIcon scout_cola
+			Health 125
+			Skill Normal
+			Item "The Soda Popper"
+		}	
+		T_TFBot_Scout_Fanowar
+		{
+		    Name "Fan'o war Scout"
+			Class Scout
+			ClassIcon scout_fanowar
+			Health 125
+			Skill Normal
+			Item "the fan o'war"
+			Item "Humanitarian's Hachimaki"
+		}	
+		T_TFBot_Demoknight_Fire
+		{
+		    Name "Fire Demoknight"
+			Class Demoman
+			ClassIcon demoknight_fire
+			Health 175
+			Skill Normal
+			Item "The eyelander"
+			Item "The chargin' targe"
+			ItemAttributes
+			{
+			    ItemName "The eyelander"
+				"Set DamageType Ignite" 1
+			}
+		}	
+		T_TFBot_Sniper_Fire
+		{
+		    Name "Fire Sniper"
+			Class Sniper
+			ClassIcon sniper_flame
+			Health 125
+			Skill Hard
+			Item "tf_weapon_sniperrifle"
+			ItemAttributes
+			{
+			    ItemName "tf_weapon_sniperrifle"
+				"Set DamageType Ignite" 1
+			}
+		}	
+		T_TFBot_Soldier_Stun
+		{
+		    Name "Specialist Soldier"
+			Class Soldier
+			ClassIcon soldier_stun
+			Health 200
+			Skill Normal
+			Item "tf_weapon_rocketlauncher"
+			ItemAttributes
+			{
+			    ItemName "tf_weapon_rocketlauncher"
+				"rocket specialist" 1
+			}
+		}
+		T_TFBot_Pyro_Fireaxe
+		{
+		    Name "Axe Pyro"
+			Class Pyro
+			ClassIcon pyro_fireaxe
+			Health 175
+			Skill Easy
+			WeaponRestrictions MeleeOnly
+		}	
+		T_TFBot_Pyro_Axtinguisher
+		{
+		    Name "Axe Pyro"
+			Class Pyro
+			ClassIcon pyro_axtinguisher
+			Health 175
+			Skill Hard
+			Item "The Axtinguisher"
+			WeaponRestrictions MeleeOnly
+		}	
+		T_TFBot_Pyro_Phlog
+		{
+		    Name "Phlogistinator Pyro"
+			Class Pyro
+			ClassIcon pyro_phlog
+			Health 175
+			Skill Expert
+			Item  "The Phlogistinator"
+			WeaponRestrictions PrimaryOnly
+		}	
+		T_TFBot_Pyro_Phlog_Boostable
+		{
+		    Name "Phlogistinator Pyro"
+			Class Pyro
+			ClassIcon pyro_phlog
+			Health 175
+			Skill Expert
+			Item  "The Phlogistinator"
+			WeaponRestrictions PrimaryOnly
+			ItemAttributes
+			{
+			    ItemName  "The Phlogistinator"
+				"critboost on kill" 7
+				"heal on kill" 20
+				"health regen" 1
+			}
+		}	
+		T_TFBot_Pyro_Phlog_Boosted
+		{
+		    Name "Phlogistinator Pyro"
+			Class Pyro
+			ClassIcon pyro_phlog
+			Health 175
+			Skill Expert
+			Attributes AlwaysCrit
+			Item  "The Phlogistinator"
+			WeaponRestrictions PrimaryOnly
+			ItemAttributes
+			{
+			    ItemName  "The Phlogistinator"
+				"dmg from ranged reduced" 0.80
+				"heal on kill" 20
+				"health regen" 1
+			}
+		}	
+		T_TFBot_Pyro_Healonkill
+		{
+		    Name "Healing Pyro"
+			Class Pyro
+			ClassIcon pyro_heal
+			Health 175
+			Skill Hard
+			Item  "tf_weapon_flamethrower"
+			ItemAttributes
+			{
+			    ItemName "tf_weapon_flamethrower"
+				"heal on kill" 88
+			}
+		}	
+		T_TFBot_Pyro_Healonhit
+		{
+		    Name "Healing Pyro"
+			Class Pyro
+			ClassIcon pyro_heal
+			Health 175
+			Skill Normal
+			Item  "tf_weapon_flamethrower"
+			ItemAttributes
+			{
+			    ItemName "tf_weapon_flamethrower"
+				"heal on hit for rapidfire" 2
+			}
+		}	
+		T_TFBot_Pyro_Thirddegree
+		{
+		    Name "Third Degree Pyro"
+			Class Pyro
+			ClassIcon pyro_thirddegree
+			Health 175
+			Skill Hard
+			Item  "The Third Degree"
+			WeaponRestrictions MeleeOnly
+		}	
+		T_TFBot_Sniper_Huntsman_Bleed
+        {
+            Class Sniper
+            Name "Bleeder Bowman"
+			Skill Hard
+            ClassIcon sniper_huntsman_bleed
+            Item "The Huntsman"
+            ItemAttributes
+            {
+                ItemName "The Huntsman"
+                "bleeding duration" 2
+            }
+        }	
+		T_TFBot_Sniper_Huntsman_Bleed_Razorback
+        {
+            Class Sniper
+            Name "Razorback Bowman"
+			Skill Hard
+            ClassIcon sniper_huntsman_bleed_razorback
+            Item "The Huntsman"
+			Item "The Razorback"
+            ItemAttributes
+            {
+                ItemName "The Huntsman"
+                "bleeding duration" 2
+            }
+        }	
+		T_TFBot_Sniper_Huntsman_Bleed_Razorback_Jarate
+        {
+            Class Sniper
+            Name "Razorback Bowman"
+			Skill Hard
+            ClassIcon sniper_huntsman_bleed_razorback
+            Item "The Huntsman"
+			Item "The Razorback"
+			Item "The Doublecross-comm"
+            ItemAttributes
+            {
+                ItemName "The Huntsman"
+                "bleeding duration" 2
+            }
+			ItemAttributes
+			{
+			    ItemName "The Razorback"
+				"jarate backstabber" 1
+			}
+        }	
+		T_TFBot_Giant_Scout_Sunstick
+        {
+            Class Scout
+            Name "Giant Sunstick Scout"
+            Health 1600
+            ClassIcon scout_sunstick
+            Item "Sun-on-a-stick"
+            Item "The Bolt Boy"
+			Attributes MiniBoss
+            WeaponRestrictions MeleeOnly
+            ItemAttributes
+            {
+                ItemName "Sun-on-a-stick"
+                "dmg taken from fire reduced on active" 0.40
+            }
+            CharacterAttributes
+            {
+                "move speed bonus" 1.0
+                "airblast vulnerability multiplier" 0.7
+                "damage force reduction" 0.7
+                "override footstep sound set" 5
+            }
+        }
+        T_TFBot_Giant_Scout_Sunstick_Fire
+        {
+            Class Scout
+            Name "Giant Sunstick Scout"
+            Health 1600
+            ClassIcon scout_sunstick
+            Item "Sun-on-a-stick"
+            Item "The Bolt Boy"
+			Attributes MiniBoss
+            WeaponRestrictions MeleeOnly
+            ItemAttributes
+            {
+                ItemName "Sun-on-a-stick"
+                "dmg taken from fire reduced on active" 0.40
+				"Set DamageType Ignite" 1
+            }
+            ItemAttributes
+            {
+                ItemName "The Bolt Boy"
+                "attach particle effect" 2
+			}	
+            CharacterAttributes
+            {
+                "move speed bonus" 1.0
+                "airblast vulnerability multiplier" 0.7
+                "damage force reduction" 0.7
+                "override footstep sound set" 5
+     		}	
+		}	
+		T_TFBot_Giant_Scout_Bonk_v2
+        {
+            Class Scout
+            Name "Giant Bonk Scout"
+            Health 1600
+            ClassIcon scout_bonk_giant
+            Tag bot_giant
+            Item "Bonk! Atomic Punch"
+            Attributes MiniBoss
+            ItemAttributes​
+            {
+                ItemName "Bonk! Atomic Punch"
+                "effect bar recharge rate increased" 0.55
+            }
+            CharacterAttributes
+            {
+                "damage force reduction" 0.7
+                "airblast vulnerability multiplier" 0.7
+                "override footstep sound set" 5
+            }
+        }
+  ​ ​ }
+}
+
